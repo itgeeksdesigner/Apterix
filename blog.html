@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Apterix Blog — Insights on automotive paint protection film, dealer success stories, and innovation in film technology.">
+    <meta name="keywords" content="apterix blog, ppf news, paint protection film insights, dealer stories, film innovation">
+    <meta name="author" content="Apterix">
+    <meta property="og:title" content="Apterix Blog | Insights & Innovation">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#0E83E0">
+    <title>Blog | Apterix</title>
+
+    <link rel="icon" type="image/png" href="https://placehold.co/64x64/000000/0E83E0?text=A">
+
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/regular/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/fill/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/bold/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body class="blog-body">
+
+    <!-- ====================================================
+         ANNOUNCEMENT BAR
+    ==================================================== -->
+    <div class="announcement-bar" id="announcementBar">
+        <div class="container announcement-container">
+            <p class="announcement-text">
+                Join Our Dealer Network to Access Exclusive Ordering
+                <span class="announcement-divider">—</span>
+                <a href="#" class="announcement-link">Apply Now.</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- ====================================================
+         HEADER
+    ==================================================== -->
+    <header class="site-header header-solid" id="siteHeader">
+        <div class="container header-container">
+            <div class="header-inner">
+                <a href="#" class="logo" aria-label="Apterix Home">
+                    <img src="images/0nwrbi90WbbggGBPE4KXhG3AfKo.png" alt="Apterix" class="logo-img">
+                </a>
+
+                <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                        <li class="nav-item has-dropdown">
+                            <a href="#" class="nav-link">
+                                Collections
+                                <i class="ph-bold ph-caret-down nav-caret"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Polycarbonate PPF</a></li>
+                                <li><a href="#">Color PPF</a></li>
+                                <li><a href="#">Ceramic Window Film</a></li>
+                                <li><a href="#">Windshield Film</a></li>
+                                <li><a href="#">Marine Film</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item has-dropdown">
+                            <a href="blog.html" class="nav-link">
+                                Resources
+                                <i class="ph-bold ph-caret-down nav-caret"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="#">Install Guides</a></li>
+                                <li><a href="#">Care &amp; Maintenance</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">Warranty Registration</a></li>
+                                <li><a href="#">Press</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item has-dropdown">
+                            <a href="#" class="nav-link">
+                                Technology
+                                <i class="ph-bold ph-caret-down nav-caret"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">APTERIX:PRO</a></li>
+                                <li><a href="#">APTERIX:CLR</a></li>
+                                <li><a href="#">APTERIX:SLR+</a></li>
+                                <li><a href="#">APTERIX:WPF</a></li>
+                                <li><a href="#">APTERIX:AQUA</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header-actions">
+                    <button class="icon-btn" aria-label="Search"><i class="ph ph-magnifying-glass"></i></button>
+                    <a href="#" class="icon-btn" aria-label="Account"><i class="ph ph-user"></i></a>
+                    <a href="#" class="icon-btn cart-btn" aria-label="Cart">
+                        <i class="ph ph-shopping-bag"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile overlay -->
+    <div class="mobile-overlay" id="mobileOverlay" aria-hidden="true">
+        <nav class="mobile-nav" aria-label="Mobile navigation">
+            <ul class="mobile-nav-list">
+                <li><a href="#" class="mobile-nav-link">Home</a></li>
+                <li><a href="#" class="mobile-nav-link">Collections</a></li>
+                <li><a href="#" class="mobile-nav-link">Technology</a></li>
+                <li><a href="#" class="mobile-nav-link">Become a Dealer</a></li>
+                <li><a href="#" class="mobile-nav-link">About</a></li>
+                <li><a href="blog.html" class="mobile-nav-link">Blog</a></li>
+                <li><a href="#" class="mobile-nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main class="page-main">
+
+        <!-- ====================================================
+             PAGE HERO
+        ==================================================== -->
+        <section class="page-hero">
+            <div class="container">
+                <div class="page-hero-inner">
+                    <nav class="breadcrumbs" aria-label="Breadcrumb">
+                        <a href="#">Home</a>
+                        <i class="ph ph-caret-right"></i>
+                        <span>Blog</span>
+                    </nav>
+                    <span class="eyebrow eyebrow-pill">Blog</span>
+                    <h1 class="page-hero-title">Insights, Innovation &amp; Inspiration</h1>
+                    <p class="page-hero-subtitle">News, deep-dives, and case studies from the team and dealer network shaping the next generation of automotive film.</p>
+
+                    <form class="blog-search" role="search" aria-label="Search articles">
+                        <i class="ph ph-magnifying-glass"></i>
+                        <input type="search" class="blog-search-input" placeholder="Search articles, topics, dealers...">
+                        <button type="submit" class="btn btn-primary-blue blog-search-btn">Search</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================================================
+             FILTER CHIPS
+        ==================================================== -->
+        <section class="filter-section">
+            <div class="container">
+                <div class="filter-chips" role="tablist">
+                    <button class="filter-chip active" data-filter="all" role="tab" aria-selected="true">All Articles</button>
+                    <button class="filter-chip" data-filter="innovation" role="tab">Innovation</button>
+                    <button class="filter-chip" data-filter="dealer-stories" role="tab">Dealer Stories</button>
+                    <button class="filter-chip" data-filter="education" role="tab">Education</button>
+                    <button class="filter-chip" data-filter="news" role="tab">News</button>
+                    <button class="filter-chip" data-filter="events" role="tab">Events</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================================================
+             FEATURED ARTICLE
+        ==================================================== -->
+        <section class="featured-article-section">
+            <div class="container">
+                <article class="featured-article">
+                    <a href="article.html" class="featured-image">
+                        <img src="images/IMG_9049_23MP.jpg" alt="Featured article cover">
+                        <span class="article-tag article-tag-featured">Featured</span>
+                    </a>
+                    <div class="featured-content">
+                        <div class="article-meta-top">
+                            <span class="article-category">Innovation</span>
+                            <span class="article-meta-dot">•</span>
+                            <time class="article-date" datetime="2026-05-12">May 12, 2026</time>
+                            <span class="article-meta-dot">•</span>
+                            <span class="article-read">8 min read</span>
+                        </div>
+                        <h2 class="featured-title">
+                            <a href="article.html">Inside the Lab: How Polycarbonate Chemistry Is Changing PPF Forever</a>
+                        </h2>
+                        <p class="featured-excerpt">A behind-the-scenes look at the molecular engineering driving our patented polycarbonate-dominant film — and what it means for installers fighting yellowing, peel-back, and adhesive failure.</p>
+                        <div class="article-author">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=120&q=80&auto=format&fit=crop&crop=faces" alt="" class="article-author-avatar">
+                            <div class="article-author-meta">
+                                <span class="article-author-name">Dr. Mira Patel</span>
+                                <span class="article-author-role">Head of Materials Science</span>
+                            </div>
+                        </div>
+                        <a href="article.html" class="btn btn-primary-blue">
+                            Read Article
+                            <i class="ph-bold ph-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ====================================================
+             ARTICLES GRID
+        ==================================================== -->
+        <section class="articles-section">
+            <div class="container">
+                <div class="section-header section-header-left">
+                    <span class="eyebrow">Latest Posts</span>
+                    <h2 class="section-title">Recent Articles</h2>
+                </div>
+
+                <div class="articles-grid" id="articlesGrid">
+
+                    <article class="article-card" data-category="dealer-stories">
+                        <a href="article.html" class="article-card-image">
+                            <img src="images/image_13.png" alt="Dealer spotlight">
+                        </a>
+                        <div class="article-card-content">
+                            <span class="article-category">Dealer Stories</span>
+                            <h3 class="article-card-title">
+                                <a href="article.html">From Garage Startup to Six-Figure Studio: One Installer's Apterix Journey</a>
+                            </h3>
+                            <p class="article-card-excerpt">How a single-bay operation in Phoenix scaled to a four-installer shop in 18 months using Apterix's territory-protected dealer model.</p>
+                            <div class="article-card-meta">
+                                <time datetime="2026-05-08">May 8, 2026</time>
+                                <span class="article-meta-dot">•</span>
+                                <span>6 min read</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-card" data-category="education">
+                        <a href="article.html" class="article-card-image">
+                            <img src="images/IMG_1751_23MP.jpg" alt="Install guide">
+                        </a>
+                        <div class="article-card-content">
+                            <span class="article-category">Education</span>
+                            <h3 class="article-card-title">
+                                <a href="article.html">5 Common Edge-Wrap Mistakes — And the Fix Every Installer Should Know</a>
+                            </h3>
+                            <p class="article-card-excerpt">Field-tested techniques for cleaner edge wraps on body lines, door jambs, and tight contours. Practical tips from our master installer team.</p>
+                            <div class="article-card-meta">
+                                <time datetime="2026-05-04">May 4, 2026</time>
+                                <span class="article-meta-dot">•</span>
+                                <span>9 min read</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-card" data-category="news">
+                        <a href="article.html" class="article-card-image">
+                            <img src="images/42565ae8-fb09-11f0-b8ef-0242ac120004.jpg" alt="Patent news">
+                        </a>
+                        <div class="article-card-content">
+                            <span class="article-category">News</span>
+                            <h3 class="article-card-title">
+                                <a href="article.html">Apterix Granted New US Patent for Multi-Layer Adhesive System</a>
+                            </h3>
+                            <p class="article-card-excerpt">The USPTO has issued a new patent covering our proprietary multi-layer pressure-sensitive adhesive — a key piece of the next-gen Apterix film stack.</p>
+                            <div class="article-card-meta">
+                                <time datetime="2026-04-29">April 29, 2026</time>
+                                <span class="article-meta-dot">•</span>
+                                <span>4 min read</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-card" data-category="innovation">
+                        <a href="article.html" class="article-card-image">
+                            <img src="images/MVRmGhyNAuvdvethmiwG1ySTsA.jpg" alt="Color lab">
+                        </a>
+                        <div class="article-card-content">
+                            <span class="article-category">Innovation</span>
+                            <h3 class="article-card-title">
+                                <a href="article.html">Inside the Color Lab: How We Engineer 50+ Exclusive Color PPF Finishes</a>
+                            </h3>
+                            <p class="article-card-excerpt">From pigment selection to UV-stable topcoats, the meticulous chemistry behind Apterix:CLR's industry-leading color library.</p>
+                            <div class="article-card-meta">
+                                <time datetime="2026-04-22">April 22, 2026</time>
+                                <span class="article-meta-dot">•</span>
+                                <span>7 min read</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-card" data-category="events">
+                        <a href="article.html" class="article-card-image">
+                            <img src="images/image_16.png" alt="SEMA recap">
+                        </a>
+                        <div class="article-card-content">
+                            <span class="article-category">Events</span>
+                            <h3 class="article-card-title">
+                                <a href="article.html">SEMA 2026 Recap: Apterix Takes the Floor with Live Install Demos</a>
+                            </h3>
+                            <p class="article-card-excerpt">A full breakdown of what we showcased at SEMA — the demo cars, the new color drops, and the dealer-only product reveal.</p>
+                            <div class="article-card-meta">
+                                <time datetime="2026-04-15">April 15, 2026</time>
+                                <span class="article-meta-dot">•</span>
+                                <span>5 min read</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-card" data-category="education">
+                        <a href="article.html" class="article-card-image">
+                            <img src="images/IMG_1531_23MP.jpg" alt="Care guide">
+                        </a>
+                        <div class="article-card-content">
+                            <span class="article-category">Education</span>
+                            <h3 class="article-card-title">
+                                <a href="article.html">The Definitive Care Guide for Paint Protection Film Owners</a>
+                            </h3>
+                            <p class="article-card-excerpt">Washing, decontamination, and maintenance protocols to keep PPF performing at its peak for the full 10-year warranty period.</p>
+                            <div class="article-card-meta">
+                                <time datetime="2026-04-10">April 10, 2026</time>
+                                <span class="article-meta-dot">•</span>
+                                <span>11 min read</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-card" data-category="dealer-stories">
+                        <a href="article.html" class="article-card-image">
+                            <img src="images/XPEL_STEALTH_767_510.jpg" alt="Marine build">
+                        </a>
+                        <div class="article-card-content">
+                            <span class="article-category">Dealer Stories</span>
+                            <h3 class="article-card-title">
+                                <a href="article.html">Apterix:Aqua Goes Coastal — A Yacht Wrap That Redefined Marine Film</a>
+                            </h3>
+                            <p class="article-card-excerpt">A premium yacht detailer documents an end-to-end Apterix:Aqua install on a 60-foot vessel, from prep to splash.</p>
+                            <div class="article-card-meta">
+                                <time datetime="2026-04-03">April 3, 2026</time>
+                                <span class="article-meta-dot">•</span>
+                                <span>10 min read</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-card" data-category="innovation">
+                        <a href="article.html" class="article-card-image">
+                            <img src="images/NcS86Nwe3N75fxOVXT6ozSmCNsa_1.jpg" alt="Self healing">
+                        </a>
+                        <div class="article-card-content">
+                            <span class="article-category">Innovation</span>
+                            <h3 class="article-card-title">
+                                <a href="article.html">Self-Healing PPF Explained: The Science Behind Disappearing Scratches</a>
+                            </h3>
+                            <p class="article-card-excerpt">How elastomeric topcoats and ambient heat work together to reflow surface scratches, and what that means for daily-driven vehicles.</p>
+                            <div class="article-card-meta">
+                                <time datetime="2026-03-27">March 27, 2026</time>
+                                <span class="article-meta-dot">•</span>
+                                <span>8 min read</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-card" data-category="news">
+                        <a href="article.html" class="article-card-image">
+                            <img src="images/ecc04290e7fc46efbce84b9dede9d253.thumbnail.0000000000.jpg" alt="New dealers">
+                        </a>
+                        <div class="article-card-content">
+                            <span class="article-category">News</span>
+                            <h3 class="article-card-title">
+                                <a href="article.html">Apterix Expands Into Canada: 12 New Authorized Dealers Announced</a>
+                            </h3>
+                            <p class="article-card-excerpt">Major news from the dealer team — our certified installer network just expanded into 8 Canadian provinces with 12 new territory partners.</p>
+                            <div class="article-card-meta">
+                                <time datetime="2026-03-20">March 20, 2026</time>
+                                <span class="article-meta-dot">•</span>
+                                <span>3 min read</span>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+
+                <!-- Pagination -->
+                <nav class="pagination" aria-label="Pagination">
+                    <button class="pagination-btn pagination-prev" disabled aria-label="Previous page">
+                        <i class="ph-bold ph-arrow-left"></i>
+                    </button>
+                    <button class="pagination-page active" aria-current="page">1</button>
+                    <button class="pagination-page">2</button>
+                    <button class="pagination-page">3</button>
+                    <span class="pagination-ellipsis">…</span>
+                    <button class="pagination-page">8</button>
+                    <button class="pagination-btn pagination-next" aria-label="Next page">
+                        <i class="ph-bold ph-arrow-right"></i>
+                    </button>
+                </nav>
+            </div>
+        </section>
+
+        <!-- ====================================================
+             NEWSLETTER CTA
+        ==================================================== -->
+        <section class="newsletter-cta-section">
+            <div class="container">
+                <div class="newsletter-cta">
+                    <div class="newsletter-cta-content">
+                        <span class="eyebrow">Stay In The Loop</span>
+                        <h2 class="newsletter-cta-title">Get Apterix Insights, Delivered.</h2>
+                        <p class="newsletter-cta-text">Industry news, dealer stories, install techniques, and product drops — straight to your inbox.</p>
+                    </div>
+                    <form class="newsletter-cta-form" id="blogNewsletterForm">
+                        <input type="email" class="newsletter-cta-input" placeholder="name@email.com" required aria-label="Email">
+                        <button type="submit" class="btn btn-primary-blue">
+                            Subscribe
+                            <i class="ph-bold ph-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ====================================================
+         FOOTER
+    ==================================================== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-col">
+                    <h5 class="footer-heading">Technology</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Polycarbonate PPF</a></li>
+                        <li><a href="#">Color PPF</a></li>
+                        <li><a href="#">Window Film</a></li>
+                        <li><a href="#">Windshield Film</a></li>
+                        <li><a href="#">Marine Film</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5 class="footer-heading">Dealer Program</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Become a Dealer</a></li>
+                        <li><a href="#">Find a Dealer</a></li>
+                        <li><a href="#">Warranty Registration</a></li>
+                        <li><a href="#">Product Warranty</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5 class="footer-heading">Company</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Innovation</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-newsletter-col">
+                    <h5 class="footer-heading">Join the APTERIX Network</h5>
+                    <p class="footer-newsletter-text">Stay in the loop on new product launches, industry insights, and exclusive dealer opportunities — delivered straight to your inbox.</p>
+                    <form class="footer-newsletter-form" id="newsletterForm">
+                        <input type="email" class="footer-newsletter-input" placeholder="name@email.com" required aria-label="Email address">
+                        <button type="submit" class="btn btn-primary-blue footer-newsletter-btn">Subscribe Now</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-wordmark">
+                <img src="images/12_2.png" alt="Apterix" class="footer-wordmark-img">
+            </div>
+
+            <div class="footer-bottom">
+                <ul class="footer-legal">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms Of Service</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                </ul>
+                <p class="copyright">© Apterix 2026. All rights reserved.</p>
+                <ul class="footer-social-list">
+                    <li><a href="#" class="footer-social-link"><i class="ph-fill ph-instagram-logo"></i><span>Instagram</span></a></li>
+                    <li><a href="#" class="footer-social-link"><i class="ph-fill ph-youtube-logo"></i><span>Youtube</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="ph-bold ph-arrow-up"></i></button>
+
+    <div class="custom-cursor" id="customCursor" aria-hidden="true"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

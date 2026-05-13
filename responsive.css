@@ -1,0 +1,503 @@
+/* =============================================================
+   APTERIX — RESPONSIVE STYLESHEET (mobile-first scaling)
+   Breakpoints:
+   - Large Desktop : <= 1440px
+   - Desktop       : <= 1280px
+   - Laptop        : <= 1024px
+   - Tablet        : <= 768px
+   - Mobile        : <= 480px
+============================================================= */
+
+/* ============================================
+   LARGE DESKTOP (1440px and below)
+============================================ */
+@media (max-width: 1440px) {
+    :root {
+        --container-width: 1200px;
+        --fs-h1: 78px;
+        --fs-h2: 52px;
+    }
+}
+
+/* ============================================
+   DESKTOP (1280px and below)
+============================================ */
+@media (max-width: 1280px) {
+    :root {
+        --container-width: 1100px;
+        --fs-h1: 72px;
+        --fs-h2: 48px;
+        --gutter: 28px;
+        --section-padding-y: 100px;
+    }
+
+    .stat-number { font-size: 64px; }
+}
+
+/* ============================================
+   LAPTOP (1024px and below)
+============================================ */
+@media (max-width: 1024px) {
+    :root {
+        --container-width: 100%;
+        --fs-h1: 64px;
+        --fs-h2: 44px;
+        --fs-h3: 22px;
+        --fs-h4: 18px;
+        --gutter: 24px;
+        --section-padding-y: 96px;
+        --section-padding-y-sm: 64px;
+    }
+
+    .nav-list { gap: var(--sp-24); }
+    .nav-link { font-size: var(--fs-14); }
+
+    .stat-number { font-size: 56px; }
+
+    .pillars-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .collections-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-top {
+        grid-template-columns: 1.4fr 1fr 1fr 1fr;
+        gap: var(--sp-32);
+    }
+}
+
+/* ============================================
+   TABLET (768px and below)
+============================================ */
+@media (max-width: 768px) {
+    :root {
+        --fs-h1: 56px;
+        --fs-h2: 38px;
+        --fs-h3: 20px;
+        --fs-h4: 18px;
+        --fs-h5: 16px;
+        --fs-h6: 15px;
+
+        --gutter: 20px;
+        --section-padding-y: 80px;
+        --section-padding-y-sm: 56px;
+    }
+
+    body { font-size: var(--fs-15); }
+
+    /* ---- Header / Nav ---- */
+    .header-inner {
+        grid-template-columns: auto 1fr;
+        gap: var(--sp-16);
+    }
+
+    .header-container {
+        padding-left: var(--gutter);
+        padding-right: var(--gutter);
+    }
+
+    .main-nav {
+        display: none;
+    }
+
+    .header-actions .icon-btn:not(.cart-btn) {
+        display: none;
+    }
+
+    .menu-toggle { display: flex; }
+
+    /* Announcement bar text shrinks on mobile */
+    .announcement-text { font-size: var(--fs-12); }
+    .announcement-bar { padding-top: var(--sp-10); padding-bottom: var(--sp-10); }
+
+    .site-header { top: 40px; }
+
+    /* When mobile overlay is open, header hamburger goes dark */
+    body.menu-open .site-header { background-color: transparent; box-shadow: none; }
+
+    /* ---- Hero ---- */
+    .hero-section { min-height: 580px; height: 100vh; }
+    .hero-buttons { flex-direction: column; width: 100%; max-width: 320px; }
+    .hero-buttons .btn { width: 100%; }
+    .audio-toggle { bottom: var(--sp-24); left: var(--sp-20); width: 40px; height: 40px; }
+
+    /* ---- Buttons ---- */
+    .btn {
+        padding: var(--sp-14, 14px) var(--sp-24);
+        font-size: var(--fs-14);
+    }
+
+    /* ---- Pillars ---- */
+    .pillar-card { padding: var(--sp-32) var(--sp-20); }
+    .pillar-icon { width: 56px; height: 56px; font-size: 28px; }
+
+    /* ---- Collections ---- */
+    .collection-card { aspect-ratio: 4 / 5; }
+
+    /* ---- Dealer ---- */
+    .dealer-grid,
+    .innovation-grid,
+    .locator-grid,
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: var(--sp-40);
+    }
+
+    .dealer-image-wrap,
+    .innovation-image-wrap { aspect-ratio: 16 / 11; }
+
+    .about-marquee { height: 360px; }
+    .about-marquee-track img { height: 180px; }
+
+    /* ---- Video showcase ---- */
+    .video-play { width: 72px; height: 72px; font-size: 28px; }
+
+    /* ---- Stats ---- */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--sp-40) var(--sp-24);
+    }
+
+    .stat-card { border-right: none; padding-top: var(--sp-16); padding-bottom: var(--sp-16); }
+    .stat-number { font-size: 52px; }
+
+    /* ---- Parallax banner ---- */
+    .parallax-banner { height: 480px; }
+
+    /* ---- Tech cards ---- */
+    .tech-cards-grid { grid-template-columns: 1fr; gap: var(--sp-24); }
+
+    /* ---- Logo marquee ---- */
+    .logo-marquee-track { gap: var(--sp-40); }
+    .logo-item { width: 140px; height: 60px; }
+
+    /* ---- CTA banner ---- */
+    .cta-banner { height: 460px; }
+
+    /* ---- Success carousel ---- */
+    .success-card { flex: 0 0 300px; }
+    .success-image { aspect-ratio: 4 / 3; }
+
+    /* ---- Timeline ---- */
+    .timeline { padding-left: var(--sp-48); }
+    .timeline-line { left: 16px; }
+    .timeline-item { grid-template-columns: 64px 1fr; gap: var(--sp-20); }
+    .timeline-node { left: -40px; width: 12px; height: 12px; }
+    .timeline-year { font-size: 22px; }
+
+    /* ---- FAQ ---- */
+    .faq-question {
+        padding: var(--sp-20) var(--sp-20);
+        font-size: var(--fs-15);
+    }
+    .faq-answer {
+        padding-left: var(--sp-20);
+        padding-right: var(--sp-20);
+    }
+    .faq-item.active .faq-answer {
+        padding-bottom: var(--sp-20);
+    }
+
+    /* ---- Footer ---- */
+    .footer-top {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--sp-40) var(--sp-32);
+    }
+
+    .footer-newsletter-col {
+        grid-column: 1 / -1;
+    }
+
+    .footer-newsletter-form {
+        max-width: 100%;
+    }
+
+    .footer-wordmark-text {
+        font-size: clamp(80px, 24vw, 200px);
+    }
+
+    .footer-bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: var(--sp-16);
+    }
+
+    .footer-legal {
+        flex-wrap: wrap;
+        gap: var(--sp-16);
+        justify-self: center;
+        justify-content: center;
+    }
+
+    .footer-social-list {
+        justify-self: center;
+    }
+
+    .footer-audio-toggle {
+        bottom: var(--sp-16);
+        left: var(--sp-16);
+        width: 36px;
+        height: 36px;
+        font-size: var(--fs-16);
+    }
+
+    /* ---- Back to top ---- */
+    .back-to-top { width: 42px; height: 42px; bottom: var(--sp-16); right: var(--sp-16); }
+}
+
+/* ============================================
+   MOBILE (480px and below)
+============================================ */
+@media (max-width: 480px) {
+    :root {
+        --fs-h1: 44px;
+        --fs-h2: 32px;
+        --fs-h3: 19px;
+
+        --gutter: 18px;
+        --section-padding-y: 64px;
+        --section-padding-y-sm: 48px;
+    }
+
+    .header-inner { gap: var(--sp-16); }
+    .logo-img { height: 28px; }
+
+    .mobile-nav-link { font-size: 26px; }
+
+    .pillars-grid { grid-template-columns: 1fr; }
+    .collections-grid { grid-template-columns: 1fr; }
+
+    .stats-grid { grid-template-columns: 1fr; gap: var(--sp-32); }
+    .stat-number { font-size: 48px; }
+
+    .parallax-banner { height: 380px; }
+    .cta-banner { height: 380px; }
+
+    .success-card { flex: 0 0 calc(100vw - 60px); }
+
+    .footer-top { grid-template-columns: 1fr; gap: var(--sp-32); }
+
+    .footer-newsletter-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .footer-newsletter-btn { width: 100%; }
+
+    .footer-wordmark-text {
+        font-size: clamp(56px, 28vw, 140px);
+    }
+
+    .footer-legal { gap: var(--sp-12); font-size: var(--fs-13); }
+
+    .video-play { width: 60px; height: 60px; font-size: 22px; }
+
+    .custom-cursor { display: none; }
+}
+
+/* ============================================
+   ULTRA SMALL (360px and below)
+============================================ */
+@media (max-width: 360px) {
+    :root {
+        --fs-h1: 38px;
+        --fs-h2: 28px;
+        --gutter: 14px;
+    }
+
+    .stat-number { font-size: 42px; }
+    .mobile-nav-link { font-size: 22px; }
+}
+
+/* =============================================================
+   BLOG + ARTICLE PAGE RESPONSIVE
+============================================================= */
+
+@media (max-width: 1024px) {
+    .articles-grid,
+    .related-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .featured-article {
+        gap: var(--sp-40);
+    }
+
+    .article-body-container {
+        grid-template-columns: 60px minmax(0, 720px);
+        gap: var(--sp-40);
+    }
+}
+
+@media (max-width: 768px) {
+    .page-main,
+    .article-main {
+        padding-top: 96px;
+    }
+
+    .page-hero {
+        padding-top: var(--sp-48);
+        padding-bottom: var(--sp-48);
+    }
+
+    .blog-search {
+        flex-direction: column;
+        padding: var(--sp-12);
+        border-radius: var(--radius-md);
+    }
+
+    .blog-search > i { display: none; }
+
+    .blog-search-input { width: 100%; padding: var(--sp-12) var(--sp-16); border: 1px solid var(--color-border); border-radius: var(--radius-sm); }
+
+    .blog-search-btn { width: 100%; }
+
+    .filter-chips {
+        justify-content: flex-start;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding-bottom: var(--sp-8);
+    }
+
+    .filter-chip { flex-shrink: 0; }
+
+    .featured-article {
+        grid-template-columns: 1fr;
+        gap: var(--sp-32);
+    }
+
+    .articles-grid,
+    .related-grid {
+        grid-template-columns: 1fr;
+        gap: var(--sp-24);
+    }
+
+    /* Article page */
+    .article-hero {
+        padding-top: var(--sp-32);
+        padding-bottom: var(--sp-32);
+    }
+
+    .article-hero-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--sp-16);
+    }
+
+    .article-body-container {
+        grid-template-columns: 1fr;
+        gap: var(--sp-32);
+    }
+
+    /* Hide sticky sidebar on mobile; share moves inline */
+    .article-sidebar {
+        position: static;
+        order: 2;
+    }
+
+    .article-share {
+        flex-direction: row;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        padding-top: var(--sp-16);
+        padding-bottom: var(--sp-16);
+        border-top: 1px solid var(--color-border);
+    }
+
+    .article-share-label {
+        padding-right: var(--sp-12);
+        padding-bottom: 0;
+    }
+
+    .article-body {
+        font-size: var(--fs-16);
+    }
+
+    .article-body p,
+    .article-list li {
+        font-size: var(--fs-16);
+        line-height: 1.7;
+    }
+
+    .article-lede {
+        font-size: var(--fs-18) !important;
+    }
+
+    .article-quote {
+        padding: var(--sp-24) var(--sp-24);
+    }
+
+    .article-quote p {
+        font-size: var(--fs-17);
+        padding-left: 0;
+    }
+
+    .article-quote::before {
+        font-size: 56px;
+        top: var(--sp-4);
+        left: var(--sp-12);
+    }
+
+    .author-bio {
+        grid-template-columns: 1fr;
+        gap: var(--sp-16);
+        text-align: center;
+        align-items: center;
+        padding: var(--sp-24);
+    }
+
+    .author-bio-avatar {
+        width: 88px;
+        height: 88px;
+        align-self: center;
+    }
+
+    .author-bio-content {
+        align-items: center;
+        text-align: center;
+    }
+
+    .newsletter-cta {
+        grid-template-columns: 1fr;
+        gap: var(--sp-24);
+        padding: var(--sp-32);
+    }
+
+    .newsletter-cta-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .newsletter-cta-form .btn {
+        width: 100%;
+    }
+
+    .pagination {
+        flex-wrap: wrap;
+        padding-top: var(--sp-32);
+    }
+
+    .pagination-btn,
+    .pagination-page {
+        width: 40px;
+        height: 40px;
+        font-size: var(--fs-13);
+    }
+}
+
+@media (max-width: 480px) {
+    .filter-chips { gap: var(--sp-8); }
+    .filter-chip { padding: var(--sp-8) var(--sp-14, 14px); font-size: var(--fs-13); }
+
+    .article-hero-title {
+        font-size: clamp(28px, 8vw, 40px);
+    }
+
+    .featured-title {
+        font-size: clamp(22px, 6vw, 32px);
+    }
+}
