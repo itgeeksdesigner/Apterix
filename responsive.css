@@ -115,7 +115,42 @@
     .site-header { top: 40px; }
 
     /* When mobile overlay is open, header hamburger goes dark */
-    body.menu-open .site-header { background-color: transparent; box-shadow: none; }
+    body.menu-open .site-header {
+        background-color: transparent;
+        box-shadow: none;
+        z-index: calc(var(--z-overlay) + 1);
+    }
+    body.menu-open .menu-toggle .hamburger-line { background-color: var(--color-text-dark); }
+    body.menu-open .header-actions .icon-btn { color: var(--color-text-dark); }
+
+    /* ---- Microsite Header (mobile refinements) ---- */
+    .microsite-body .site-header {
+        padding-top: var(--sp-12);
+        padding-bottom: var(--sp-12);
+    }
+    .microsite-body .header-container {
+        padding-left: var(--sp-16);
+        padding-right: var(--sp-16);
+    }
+    .microsite-body .header-inner { gap: var(--sp-12); }
+    .microsite-body .logo-img { height: 28px; }
+    .microsite-body .header-actions { gap: var(--sp-4); }
+    .microsite-body .icon-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        color: var(--color-white);
+    }
+    .microsite-body .menu-toggle {
+        width: 40px;
+        height: 40px;
+        margin-left: var(--sp-4);
+    }
+    .microsite-body .menu-toggle .hamburger-line { background-color: var(--color-white); }
+    .microsite-body .cart-count {
+        background-color: var(--color-blue);
+        color: var(--color-white);
+    }
 
     /* ---- Hero ---- */
     .hero-section { min-height: 580px; height: 100vh; }
