@@ -4609,3 +4609,334 @@ body.scrolled-deep .ms-subnav {
     .ms-spec-value { font-size: 28px; }
     .ms-cta-title { font-size: 32px; }
 }
+
+/* =============================================================
+   MICROSITE — HUB & SPOKE EXTENSIONS
+   Hub solution grid + per-category accent themes.
+============================================================= */
+
+/* ---- Category accent tokens (set on <body class="ms-theme-*">) ---- */
+.ms-theme-hub {
+    --ms-accent: var(--color-blue);
+    --ms-accent-soft: var(--color-ice-blue-1);
+    --ms-accent-deep: var(--color-blue-deep);
+    --ms-accent-tint: rgba(14, 131, 224, 0.10);
+    --ms-hero-overlay-tint: rgba(0, 0, 0, 0);
+}
+
+.ms-theme-ppf {
+    --ms-accent: #0E83E0;
+    --ms-accent-soft: #E8F1FA;
+    --ms-accent-deep: #0A0A0A;
+    --ms-accent-tint: rgba(14, 131, 224, 0.10);
+    --ms-hero-overlay-tint: rgba(10, 12, 20, 0.18);
+}
+
+.ms-theme-color {
+    --ms-accent: #B23A6B;
+    --ms-accent-soft: #F8EAF1;
+    --ms-accent-deep: #4A1530;
+    --ms-accent-tint: rgba(178, 58, 107, 0.10);
+    --ms-hero-overlay-tint: rgba(74, 21, 48, 0.25);
+}
+
+.ms-theme-tint {
+    --ms-accent: #C28A4B;
+    --ms-accent-soft: #FBF3E8;
+    --ms-accent-deep: #4A3217;
+    --ms-accent-tint: rgba(194, 138, 75, 0.12);
+    --ms-hero-overlay-tint: rgba(56, 38, 14, 0.18);
+}
+
+.ms-theme-marine {
+    --ms-accent: #1E5F8C;
+    --ms-accent-soft: #E5EEF6;
+    --ms-accent-deep: #0F2E45;
+    --ms-accent-tint: rgba(30, 95, 140, 0.12);
+    --ms-hero-overlay-tint: rgba(10, 35, 60, 0.25);
+}
+
+/* ---- Apply accent to shared microsite components ---- */
+.microsite-body[class*="ms-theme-"] .ms-subnav-dot {
+    background-color: var(--ms-accent);
+    box-shadow: 0 0 0 4px var(--ms-accent-tint);
+}
+
+.microsite-body[class*="ms-theme-"] .ms-subnav-link.is-active {
+    background-color: var(--ms-accent);
+}
+
+.microsite-body[class*="ms-theme-"] .ms-subnav-link:hover {
+    background-color: var(--ms-accent-soft);
+}
+
+.microsite-body[class*="ms-theme-"] .ms-hero-overlay::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: var(--ms-hero-overlay-tint);
+    pointer-events: none;
+}
+
+.microsite-body[class*="ms-theme-"] .ms-chip {
+    background-color: var(--ms-accent-tint);
+    color: var(--ms-accent);
+    border-color: color-mix(in srgb, var(--ms-accent) 28%, transparent);
+}
+
+/* Light chips on dark heroes/CTAs keep the white-on-dark style */
+.microsite-body[class*="ms-theme-"] .ms-chip.ms-chip-light {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: var(--color-white);
+    border-color: rgba(255, 255, 255, 0.20);
+}
+
+/* ============================================
+   HUB: SOLUTIONS GRID
+============================================ */
+.ms-solutions {
+    width: 100%;
+    background-color: var(--color-off-white);
+    display: flex;
+    justify-content: center;
+    padding-top: var(--sp-96);
+    padding-bottom: var(--sp-96);
+}
+
+.ms-solutions .container {
+    align-items: center;
+    gap: var(--sp-56);
+}
+
+.ms-solutions-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--sp-32);
+}
+
+.ms-solution-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: var(--transition-base);
+    color: var(--color-text-dark);
+    text-decoration: none;
+}
+
+.ms-solution-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 24px 48px -16px rgba(10, 14, 22, 0.18);
+    border-color: var(--ms-card-accent, var(--color-blue));
+}
+
+/* Per-card accent (set on the card itself for hub page) */
+.ms-solution-card.ms-accent-ppf { --ms-card-accent: #0E83E0; --ms-card-soft: #E8F1FA; }
+.ms-solution-card.ms-accent-color { --ms-card-accent: #B23A6B; --ms-card-soft: #F8EAF1; }
+.ms-solution-card.ms-accent-tint { --ms-card-accent: #C28A4B; --ms-card-soft: #FBF3E8; }
+.ms-solution-card.ms-accent-marine { --ms-card-accent: #1E5F8C; --ms-card-soft: #E5EEF6; }
+
+.ms-solution-image {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    background-color: var(--color-soft-bg);
+}
+
+.ms-solution-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+
+.ms-solution-card:hover .ms-solution-image img {
+    transform: scale(1.04);
+}
+
+.ms-solution-tag {
+    position: absolute;
+    top: var(--sp-16);
+    left: var(--sp-16);
+    z-index: 2;
+    padding: var(--sp-6) var(--sp-12);
+    background-color: var(--color-white);
+    color: var(--ms-card-accent, var(--color-blue));
+    border-radius: var(--radius-pill);
+    font-size: var(--fs-11);
+    font-weight: var(--fw-bold);
+    letter-spacing: var(--ls-wider);
+    text-transform: var(--tt-upper);
+}
+
+.ms-solution-body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-12);
+    padding: var(--sp-32);
+    border-top: 3px solid var(--ms-card-accent, var(--color-blue));
+}
+
+.ms-solution-kicker {
+    font-size: var(--fs-11);
+    font-weight: var(--fw-bold);
+    letter-spacing: var(--ls-wider);
+    text-transform: var(--tt-upper);
+    color: var(--ms-card-accent, var(--color-blue));
+}
+
+.ms-solution-title {
+    font-size: 30px;
+    font-weight: var(--fw-extrabold);
+    line-height: var(--lh-tight);
+    color: var(--color-text-dark);
+}
+
+.ms-solution-promise {
+    font-size: var(--fs-17);
+    color: var(--color-text-body);
+    line-height: var(--lh-relaxed);
+}
+
+.ms-solution-points {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-8);
+    padding-top: var(--sp-8);
+    list-style: none;
+}
+
+.ms-solution-points li {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--sp-10);
+    font-size: var(--fs-14);
+    color: var(--color-text-body);
+    line-height: var(--lh-relaxed);
+}
+
+.ms-solution-points i {
+    color: var(--ms-card-accent, var(--color-blue));
+    flex-shrink: 0;
+    padding-top: 4px;
+}
+
+.ms-solution-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--sp-8);
+    padding-top: var(--sp-12);
+    font-size: var(--fs-14);
+    font-weight: var(--fw-bold);
+    color: var(--ms-card-accent, var(--color-blue));
+    letter-spacing: var(--ls-wide);
+    text-transform: var(--tt-upper);
+}
+
+.ms-solution-card:hover .ms-solution-cta i {
+    transform: translateX(4px);
+    transition: transform var(--transition-fast);
+}
+
+/* ============================================
+   HUB: SELECTOR HELP GRID
+============================================ */
+.ms-selector {
+    width: 100%;
+    background-color: var(--color-white);
+    display: flex;
+    justify-content: center;
+    padding-top: var(--sp-96);
+    padding-bottom: var(--sp-96);
+}
+
+.ms-selector .container {
+    align-items: center;
+    gap: var(--sp-48);
+}
+
+.ms-selector-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--sp-20);
+}
+
+.ms-selector-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-12);
+    padding: var(--sp-28);
+    background-color: var(--color-soft-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    transition: var(--transition-fast);
+}
+
+.ms-selector-card:hover {
+    border-color: var(--color-blue);
+    background-color: var(--color-white);
+    box-shadow: 0 12px 24px -10px rgba(10, 14, 22, 0.10);
+}
+
+.ms-selector-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background-color: var(--color-ice-blue-1);
+    color: var(--color-blue);
+    border-radius: var(--radius-md);
+    font-size: 24px;
+}
+
+.ms-selector-title {
+    font-size: var(--fs-18);
+    font-weight: var(--fw-bold);
+    line-height: var(--lh-tight);
+    color: var(--color-text-dark);
+}
+
+.ms-selector-text {
+    font-size: var(--fs-14);
+    color: var(--color-text-body);
+    line-height: var(--lh-relaxed);
+}
+
+.ms-selector-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--sp-8);
+    padding-top: var(--sp-8);
+    font-size: var(--fs-13);
+    font-weight: var(--fw-bold);
+    color: var(--color-blue);
+    letter-spacing: var(--ls-wide);
+    text-transform: var(--tt-upper);
+    transition: gap var(--transition-fast);
+}
+
+.ms-selector-link:hover {
+    gap: var(--sp-12);
+}
+
+/* ============================================
+   HUB: RESPONSIVE
+============================================ */
+@media (max-width: 1024px) {
+    .ms-solutions-grid { grid-template-columns: 1fr; gap: var(--sp-20); }
+    .ms-selector-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+    .ms-selector-grid { grid-template-columns: 1fr; }
+    .ms-solution-image { height: 220px; }
+    .ms-solution-body { padding: var(--sp-24); }
+    .ms-solution-title { font-size: 24px; }
+}
