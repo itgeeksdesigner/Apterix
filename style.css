@@ -3871,7 +3871,7 @@ body.scrolled-deep .ms-subnav {
 
 .ms-hero-title {
     color: var(--color-white);
-    font-size: var(--fs-h1);
+    font-size: 64px;
     font-weight: var(--fw-extrabold);
     line-height: var(--lh-hero);
     letter-spacing: var(--ls-hero);
@@ -4592,7 +4592,7 @@ body.scrolled-deep .ms-subnav {
     .ms-subnav-cta { display: none; }
     .ms-hero { min-height: 78vh; }
     .ms-hero .container { padding-top: var(--sp-80); padding-bottom: var(--sp-80); }
-    .ms-hero-title { font-size: 44px; }
+    .ms-hero-title { font-size: 36px; }
     .ms-hero-sub { font-size: var(--fs-17); }
     .ms-story-grid { grid-template-columns: 1fr; }
     .ms-story-grid.is-reversed .ms-story-media { order: 0; }
@@ -4605,7 +4605,7 @@ body.scrolled-deep .ms-subnav {
 }
 
 @media (max-width: 480px) {
-    .ms-hero-title { font-size: 36px; }
+    .ms-hero-title { font-size: 30px; }
     .ms-spec-value { font-size: 28px; }
     .ms-cta-title { font-size: 32px; }
 }
@@ -4633,41 +4633,41 @@ body.scrolled-deep .ms-subnav {
 }
 
 .ms-theme-color {
-    --ms-accent: #B23A6B;
-    --ms-accent-soft: #F8EAF1;
-    --ms-accent-deep: #4A1530;
-    --ms-accent-tint: rgba(178, 58, 107, 0.10);
-    --ms-hero-overlay-tint: rgba(74, 21, 48, 0.25);
+    --ms-accent: #0E83E0;
+    --ms-accent-soft: #E8F1FA;
+    --ms-accent-deep: #0A0A0A;
+    --ms-accent-tint: rgba(14, 131, 224, 0.10);
+    --ms-hero-overlay-tint: rgba(10, 12, 20, 0.18);
 }
 
 .ms-theme-tint {
-    --ms-accent: #C28A4B;
-    --ms-accent-soft: #FBF3E8;
-    --ms-accent-deep: #4A3217;
-    --ms-accent-tint: rgba(194, 138, 75, 0.12);
-    --ms-hero-overlay-tint: rgba(56, 38, 14, 0.18);
+    --ms-accent: #0E83E0;
+    --ms-accent-soft: #E8F1FA;
+    --ms-accent-deep: #0A0A0A;
+    --ms-accent-tint: rgba(14, 131, 224, 0.10);
+    --ms-hero-overlay-tint: rgba(10, 12, 20, 0.18);
+}
+
+.microsite-body.ms-theme-tint .ms-hero-overlay,
+.microsite-body.ms-theme-color .ms-hero-overlay,
+.microsite-body.ms-theme-marine .ms-hero-overlay {
+    background:
+        linear-gradient(180deg, rgba(0,0,0,0.40) 0%, rgba(0,0,0,0.30) 40%, rgba(0,0,0,0.65) 100%),
+        linear-gradient(90deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.20) 55%, rgba(0,0,0,0.10) 100%);
 }
 
 .ms-theme-marine {
-    --ms-accent: #1E5F8C;
-    --ms-accent-soft: #E5EEF6;
-    --ms-accent-deep: #0F2E45;
-    --ms-accent-tint: rgba(30, 95, 140, 0.12);
-    --ms-hero-overlay-tint: rgba(10, 35, 60, 0.25);
+    --ms-accent: #0E83E0;
+    --ms-accent-soft: #E8F1FA;
+    --ms-accent-deep: #0A0A0A;
+    --ms-accent-tint: rgba(14, 131, 224, 0.10);
+    --ms-hero-overlay-tint: rgba(10, 12, 20, 0.18);
 }
 
 /* ---- Apply accent to shared microsite components ---- */
 .microsite-body[class*="ms-theme-"] .ms-subnav-dot {
     background-color: var(--ms-accent);
     box-shadow: 0 0 0 4px var(--ms-accent-tint);
-}
-
-.microsite-body[class*="ms-theme-"] .ms-subnav-link.is-active {
-    background-color: var(--ms-accent);
-}
-
-.microsite-body[class*="ms-theme-"] .ms-subnav-link:hover {
-    background-color: var(--ms-accent-soft);
 }
 
 .microsite-body[class*="ms-theme-"] .ms-hero-overlay::after {
