@@ -3696,6 +3696,166 @@ body.scrolled-deep .site-header {
 }
 
 /* =============================================================
+   MICROSITE PAGES — match blog's light header + black bar
+   (microsite.html, microsite-ppf/color-ppf/tint/marine.html)
+   NOTE: no `main { padding-top }` here — microsites offset
+   their content with the sticky .ms-subnav (margin-top), so
+   adding header padding would create a double gap.
+============================================================= */
+.microsite-body .site-header {
+    background-color: var(--color-white);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: none;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+.microsite-body .site-header.scrolled {
+    background-color: var(--color-white);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.microsite-body .header-container {
+    padding-left: 48px;
+    padding-right: 48px;
+}
+
+.microsite-body .header-inner {
+    gap: 32px;
+}
+
+.microsite-body .nav-list {
+    gap: 36px;
+}
+
+.microsite-body .nav-link {
+    color: var(--color-text-dark);
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+.microsite-body .nav-link:hover {
+    color: var(--color-blue);
+}
+
+.microsite-body .logo-img {
+    height: 34px;
+}
+
+.microsite-body .header-actions {
+    gap: 4px;
+}
+
+.microsite-body .icon-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+    color: #1F2937;
+}
+
+.microsite-body .icon-btn:hover {
+    background-color: var(--color-soft-bg);
+    color: var(--color-blue);
+}
+
+.microsite-body .hamburger-line {
+    background-color: var(--color-text-dark);
+}
+
+/* Solid black announcement bar with visible white text */
+.microsite-body .announcement-bar {
+    background-color: var(--color-black);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border-bottom: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 11px;
+    padding-bottom: 11px;
+}
+
+.microsite-body .announcement-bar.scrolled {
+    background-color: var(--color-black);
+}
+
+.microsite-body .announcement-container {
+    justify-content: center;
+    text-align: center;
+}
+
+.microsite-body .announcement-text {
+    color: var(--color-white);
+    text-align: center;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.microsite-body .announcement-divider {
+    color: rgba(255, 255, 255, 0.65);
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+.microsite-body .announcement-link {
+    color: var(--color-white);
+    font-weight: 700;
+    text-underline-offset: 2px;
+    text-decoration-thickness: 1px;
+}
+
+.microsite-body .announcement-link:hover {
+    color: var(--color-blue-hover);
+}
+
+/* Match blog: hide mega-menu dropdowns, keep decorative carets */
+.microsite-body .dropdown-menu {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}
+
+.microsite-body .nav-caret {
+    display: inline-block !important;
+    font-size: 10px;
+    padding-left: 4px;
+}
+
+.microsite-body .nav-item.has-dropdown:hover .nav-caret {
+    transform: none;
+}
+
+@media (max-width: 1280px) {
+    .microsite-body .header-container {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .microsite-body .header-container {
+        padding-left: 28px;
+        padding-right: 28px;
+    }
+    .microsite-body .nav-list {
+        gap: 28px;
+    }
+}
+
+@media (max-width: 768px) {
+    .microsite-body .header-container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+/* =============================================================
    MICROSITE — Campaign-scoped styles (Polycarbonate Edition)
    Used by: microsite.html, microsite-story.html, microsite-shop.html
 ============================================================= */
@@ -4699,8 +4859,8 @@ body.scrolled-deep .ms-subnav {
     background-color: var(--color-off-white);
     display: flex;
     justify-content: center;
-    padding-top: var(--sp-96);
-    padding-bottom: var(--sp-96);
+    padding-top: var(--sp-120);
+    padding-bottom: var(--sp-80);
 }
 
 .ms-solutions .container {

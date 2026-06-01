@@ -139,14 +139,14 @@
         width: 40px;
         height: 40px;
         font-size: 20px;
-        color: var(--color-white);
+        color: var(--color-text-dark);
     }
     .microsite-body .menu-toggle {
         width: 40px;
         height: 40px;
         margin-left: var(--sp-4);
     }
-    .microsite-body .menu-toggle .hamburger-line { background-color: var(--color-white); }
+    .microsite-body .menu-toggle .hamburger-line { background-color: var(--color-text-dark); }
     .microsite-body .cart-count {
         background-color: var(--color-blue);
         color: var(--color-white);
