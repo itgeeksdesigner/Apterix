@@ -3882,7 +3882,7 @@ body.scrolled-deep .site-header {
    off-screen and the header moves to top: 0. Snap the subnav up to sit
    flush under the now-collapsed header. */
 body.scrolled-deep .ms-subnav {
-    top: 72px;
+    top: 65px;
 }
 
 .ms-subnav-inner {
