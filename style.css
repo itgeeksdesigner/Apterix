@@ -4814,6 +4814,12 @@ body.scrolled-deep .ms-subnav {
     .ms-hero-sub { font-size: var(--fs-17); }
     .ms-story-grid { grid-template-columns: 1fr; }
     .ms-story-grid.is-reversed .ms-story-media { order: 0; }
+    /* When stacked, the media has no sibling to stretch against, so give it
+       an explicit height (aspect ratio) or the image collapses and vanishes */
+    .ms-story-media {
+        height: auto;
+        aspect-ratio: 4 / 3;
+    }
     .ms-product-grid { grid-template-columns: 1fr; }
     .ms-steps-grid { grid-template-columns: 1fr; }
     .ms-compare-grid { grid-template-columns: 1fr; }
