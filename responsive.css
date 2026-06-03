@@ -128,6 +128,15 @@
         padding-top: var(--sp-12);
         padding-bottom: var(--sp-12);
     }
+    /* No announcement bar: header sits at the very top, subnav flush below */
+    .microsite-body.ms-no-announce .site-header {
+        top: 0;
+    }
+    .microsite-body.ms-no-announce .ms-subnav,
+    .microsite-body.ms-no-announce.scrolled-deep .ms-subnav {
+        top: 60px;
+        margin-top: 60px;
+    }
     .microsite-body .header-container {
         padding-left: var(--sp-16);
         padding-right: var(--sp-16);

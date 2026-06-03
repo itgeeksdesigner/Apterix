@@ -3712,6 +3712,19 @@ body.scrolled-deep .site-header {
     padding-bottom: 14px;
 }
 
+/* No announcement bar (e.g. microsite hub): pull the fixed header to the
+   very top so the content sits centered with no empty strip above it, and
+   snap the sticky subnav flush beneath the now-shorter header. */
+.microsite-body.ms-no-announce .site-header {
+    top: 0;
+}
+
+.microsite-body.ms-no-announce .ms-subnav,
+.microsite-body.ms-no-announce.scrolled-deep .ms-subnav {
+    top: 65px;
+    margin-top: 65px;
+}
+
 .microsite-body .site-header.scrolled {
     background-color: var(--color-white);
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
@@ -3765,6 +3778,51 @@ body.scrolled-deep .site-header {
 
 .microsite-body .hamburger-line {
     background-color: var(--color-text-dark);
+}
+
+/* Compact "Dealer Portal" button in the microsite header */
+.microsite-body .ms-portal-btn {
+    padding: 9px 18px;
+    font-size: 13px;
+    margin-left: 6px;
+    overflow: visible;
+}
+
+.microsite-body .ms-portal-btn i {
+    font-size: 15px;
+}
+
+.microsite-body .ms-portal-btn:hover i {
+    transform: none;
+}
+
+/* Keep the "Dealer Portal" button visible on mobile, just more compact
+   so it fits beside the cart and menu icons */
+@media (max-width: 768px) {
+    .microsite-body .ms-portal-btn {
+        padding: 8px 12px;
+        font-size: 12px;
+        margin-left: 2px;
+    }
+    .microsite-body .ms-portal-btn i {
+        font-size: 14px;
+    }
+}
+
+/* On very small screens, collapse to icon-only to save space */
+@media (max-width: 420px) {
+    .microsite-body .ms-portal-btn {
+        padding: 0;
+        width: 40px;
+        height: 40px;
+        border-radius: var(--radius-circle);
+    }
+    .microsite-body .ms-portal-btn .ms-portal-label {
+        display: none;
+    }
+    .microsite-body .ms-portal-btn i {
+        font-size: 18px;
+    }
 }
 
 /* Solid black announcement bar with visible white text */
